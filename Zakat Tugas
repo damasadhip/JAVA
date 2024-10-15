@@ -1,0 +1,32 @@
+/*
+ * Klik nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt untuk mengubah lisensi ini
+ * Klik nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java untuk mengedit template ini
+ */
+package zakatcalculator;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author ASUS
+ */
+public class ZakatCalculator {
+
+    /**
+     * @param args argumen baris perintah
+     */
+    public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Masukkan jumlah harta (uang) Anda: ");
+        double jumlahHarta = scanner.nextDouble();
+
+        double zakat = jumlahHarta * 0.025;
+
+        System.out.printf("Jumlah zakat yang harus Anda bayar adalah: %.2f\n", zakat);
+
+        scanner.close();
+    }
+    
+}
