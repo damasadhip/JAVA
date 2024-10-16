@@ -1,0 +1,42 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package testnilaihuruf;
+
+import java.util.Scanner;
+
+/**
+ * Program untuk menentukan nilai huruf berdasarkan input nilai angka.
+ */
+public class TestNilaiHuruf {
+
+    /**
+     * Method utama untuk menjalankan program.
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // Membuat instance Scanner untuk mengambil input dari pengguna
+        Scanner input = new Scanner(System.in);
+
+        // Meminta pengguna untuk memasukkan nilai angka
+        System.out.print("Masukkan nilai angka: ");
+        int angka = input.nextInt();
+
+        // Logika untuk menentukan nilai huruf berdasarkan nilai angka
+        if (angka > 85) {
+            System.out.println("A");
+        } else if (angka >= 70 && angka <= 84) {
+            System.out.println("B");
+        } else if (angka >= 60 && angka <= 69) {
+            System.out.println("C");
+        } else if (angka >= 50 && angka <= 59) {
+            System.out.println("D");
+        } else {
+            System.out.println("E");
+        }
+
+        // Menutup Scanner setelah selesai digunakan
+        input.close();
+    }
+}
