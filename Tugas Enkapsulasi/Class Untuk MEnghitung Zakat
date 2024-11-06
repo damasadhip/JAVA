@@ -1,0 +1,44 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package zakatkalkulator;
+
+/**
+ * 
+ */
+class ZakatCalculator {
+    // Atribut private untuk melindungi data pendapatan dan nama donatur
+    private String donaturName;
+    private double income;
+    private double zakatAmount;
+
+    // Konstruktor untuk inisialisasi nama donatur dan pendapatan
+    public ZakatCalculator(String donaturName, double income) {
+        this.donaturName = donaturName;
+        this.income = income;
+        calculateZakat(); // Hitung zakat saat objek dibuat
+    }
+
+    // Metode private untuk menghitung zakat berdasarkan 2.5% dari pendapatan
+    private void calculateZakat() {
+        this.zakatAmount = this.income * 0.025;
+    }
+
+    // Getter untuk nama donatur (read-only)
+    public String getDonaturName() {
+        return donaturName;
+    }
+
+    // Getter untuk jumlah zakat (read-only)
+    public double getZakatAmount() {
+        return zakatAmount;
+    }
+
+    // Setter untuk mengubah pendapatan donatur dan menghitung ulang zakat
+    public void setIncome(double income) {
+        this.income = income;
+        calculateZakat(); // Hitung ulang zakat jika pendapatan berubah
+    }
+}
+
