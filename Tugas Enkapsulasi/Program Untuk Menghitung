@@ -1,0 +1,27 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package zakatkalkulator;
+
+/**
+ * Program untuk menghitung zakat menggunakan konsep enkapsulasi
+ */
+public class ZakatKalkulator {
+
+    public static void main(String[] args) {
+        // Membuat objek ZakatCalculator untuk donatur
+        ZakatCalculator zakatDonatur = new ZakatCalculator("Damas Adhi P", 15000000);
+
+        // Menampilkan informasi zakat
+        System.out.println("Nama Donatur: " + zakatDonatur.getDonaturName());
+        System.out.println("Zakat yang harus dibayar: Rp " + zakatDonatur.getZakatAmount());
+
+        // Mengubah pendapatan donatur
+        zakatDonatur.setIncome(20000000);
+
+        // Menampilkan informasi zakat setelah perubahan pendapatan
+        System.out.println("\nPendapatan baru: Rp 20000000");
+        System.out.println("Zakat yang harus dibayar setelah perubahan: Rp " + zakatDonatur.getZakatAmount());
+    }
+}
